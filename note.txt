@@ -1,0 +1,150 @@
+
+
+Check Django is Installed or not:
+----------------------------------
+=> django-admin --version
+
+
+Install virtual env:
+-------------------
+=> pip install virtualenv
+
+
+Now go to project folder open cmd:
+-----------------------------------
+=> virtualenv venv
+venv= name of our environment
+
+
+Activate virtual env:
+----------------------
+=> venv\Scripts\activate
+
+
+Deactivate virtual env:
+-----------------------
+=> deactivate
+
+
+To check what are installed in virtual env:
+------------------------------------------
+=> pip freeze
+
+
+Install django:
+-----------------
+=> pip install django
+
+
+Creating project folder step by step correctly:
+====================================================
+
+create project folder named project_folder and go inside project_folder and open cmd or vs code
+------------------------------------------------------------------------------------------------
+
+project_folder> virtualenv venv
+
+(venv) project_folder> venv\Scripts\activate
+
+(venv) project_folder> pip install django
+
+(venv) project_folder> django-admin startproject project_folder .
+
+(venv) project_folder> python manage.py runserver
+
+---------------------------------------------------------------------
+here first project_folder is outer project folder or root directory
+and second project_folder is inner project  folder
+--------------------------------------------------
+
+__init__.py => is a file use to make a folder python package
+
+wsgi.py => work as interface between this project (web application) and web server. Here synchronous application standard is provided.
+
+asgi.py => work as interface between this project (web application) and web server. Here synchronous and asynchronous both application standard is provided
+
+manage.py => command line utility
+
+
+Running ser on different port:
+------------------------------
+=> python manage.py runserver
+Default port 8000
+
+=> python manage.py runsever 4000
+this run server on port 4000
+
+
+vs code extention:
+--------------------
+1. python
+2. django
+3. autopep8
+
+etc
+
+
+Django Create application:
+==================================================================================
+python manage.py startapp app_name
+
+add app_name :
+---------------
+go to settings.py in inner project folder and add app_name like this:
+----------------------------
+INSTALLED_APPS = [
+	...
+	'app_name',
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
