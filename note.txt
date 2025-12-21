@@ -44,7 +44,7 @@ create project folder named project_folder and go inside project_folder and open
 
 project_folder> virtualenv venv
 
-(venv) project_folder> venv\Scripts\activate
+project_folder> venv\Scripts\activate
 
 (venv) project_folder> pip install django
 
@@ -80,6 +80,7 @@ vs code extention:
 1. python
 2. django
 3. autopep8
+4. sqlite Editor
 
 etc
 
