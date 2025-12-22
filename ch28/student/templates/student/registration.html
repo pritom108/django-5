@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Complete form at once -->
+    <!-- <form action="">
+        {{form.as_div}}
+    </form>
+    <br> -->
+
+
+
+    <!-- Form field by field -->
+    <!-- <form action="">
+        <div>First Name: {{form.first_name}}</div>
+        <div>Last Name: {{form.last_name}}</div>
+    </form> -->
+    
+
+
+    <!-- Form Labeland Input by Label and Input -->
+    <!-- <form action="">
+        <div>{{form.first_name.label_tag}} {{form.first_name}}</div>
+        <div>{{form.last_name.label_tag}} {{form.last_name}}</div>
+    </form> -->
+
+
+
+
+    <!-- Form Labeland Input by Label and Input -->
+    <!-- <form action="">
+        <div>
+            <label for="{{form.first_name.id_for_label}}">{{form.first_name.label}}</label> {{form.first_name}}
+        </div>
+        <div>
+            <label for="{{form.last_name.id_for_label}}">{{form.last_name.label}}</label> {{form.last_name}}
+        </div>
+    </form> -->
+
+
+
+
+
+    <!-- Form Labeland Input by Label and Input -->
+    <form action="">
+        <div>
+            <label for="{{form.first_name.id_for_label}}">{{form.first_name.label}}</label> 
+            
+            <input type="text" name="{{form.first_name.name}}" required id="{{form.first_name.id_for_label}}" value="{{form.first_name.value|default:'Enter First Name'}}">
+        </div>
+        <div>
+            <label for="{{form.last_name.id_for_label}}">{{form.last_name.label}}</label> 
+            
+            <input type="text" name="{{form.last_name.name}}" required id="{{form.last_name.id_for_label}}" value="{{form.last_name.value|default:'Enter Last Name'}}">
+        </div>
+        <div>
+            <label for="{{form.email.id_for_label}}">{{form.email.label}}</label> 
+            
+            <input type="text" name="{{form.email.name}}" required id="{{form.email.id_for_label}}" value="{{form.email.value|default:'Enter Your Email'}}">
+        </div>
+        <div>
+            <label for="{{form.city.id_for_label}}">{{form.city.label}}</label> 
+            
+            <input type="text" name="{{form.city.name}}" required id="{{form.city.id_for_label}}" value="{{form.city.value|default:'Enter Your City'}}">
+        </div>
+        <br><br><br>
+
+
+        <div>
+            {{form.first_name.label}}
+        </div>
+        <div>
+            {{form.first_name.value}}
+        </div>
+        <div>
+            {{form.first_name.html_name}}
+        </div>
+        <div>
+            {{form.first_name.required}}
+        </div>
+        <div>
+            {{form.city.help_text}}
+        </div>
+
+    </form>
+
+
+
+</body>
+</html>
