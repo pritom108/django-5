@@ -1,5 +1,23 @@
 
 
+
+Every time do this::::
+=====================================
+first open vs code in django-5 folder
+=> venv\Scripts\activate
+=> mkdir ch1
+=> cd ch1
+=> django-admin startproject ch1 .
+=> python manage.py runserver
+=> python manage.py startapp app_name
+
+
+
+
+
+
+===================================
+
 Check Django is Installed or not:
 ----------------------------------
 => django-admin --version
