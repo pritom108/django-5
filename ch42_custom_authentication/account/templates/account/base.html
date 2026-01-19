@@ -1,0 +1,95 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>{% block title %}{% endblock title %}</title>
+</head>
+<body>
+   <header>
+    <!-- Navbar -->
+    <nav class="bg-gradient-to-r from-slate-900 via-gray-900 to-black
+                border-b border-white/10 shadow-lg">
+        <div class="max-w-7xl mx-auto px-6">
+        <div class="flex justify-between items-center h-16">
+
+            <!-- Organization Name -->
+            <div class="text-2xl font-bold">
+            <a href="{% url 'home' %}"
+                class="bg-gradient-to-r from-blue-400 to-cyan-400
+                        bg-clip-text text-transparent
+                        hover:opacity-90 transition">
+                OrgName
+            </a>
+            </div>
+
+            <!-- Menu -->
+            <ul class="flex items-center space-x-6">
+
+            <li>
+                <a href="{% url 'home' %}"
+                class="text-gray-300 hover:text-cyan-400
+                        font-medium transition">
+                Home
+                </a>
+            </li>
+
+            {% if user.is_authenticated %}
+                <li>
+                    <a href="{% url 'customer_dashboard' %}"
+                    class="text-gray-300 hover:text-cyan-400
+                            font-medium transition">
+                    Dashboard
+                    </a>
+                </li>
+                
+                <!-- Logout -->
+                <li>
+                    <form method="POST" action="{% url 'logout' %}">
+                    {% csrf_token %}
+                        <button type="submit" class="text-gray-300 hover:text-cyan-400
+                            font-medium transition">Logout</button>
+                    </form>
+                </li>
+            {% else %}
+
+                <li>
+                    <a href="{% url 'register' %}"
+                    class="text-gray-300 hover:text-cyan-400
+                            font-medium transition">
+                    Register
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{% url 'login' %}"
+                    class="text-gray-300 hover:text-cyan-400
+                            font-medium transition">
+                    Login
+                    </a>
+                </li>
+                
+            {% endif %}
+            </ul>
+        </div>
+        </div>
+    </nav>
+    </header>
+
+   
+
+
+   <main class="min-h-screen px-4 bg-gradient-to-br from-slate-900 via-gray-900 to-black dark:from-slate-900 dark:via-gray-900 dark:to-black">
+        {% if messages %}
+            {% for message in messages %}
+                <span class="{{message.tags}} bg-rose-600 p-2 font-bold">{{message}}</span> <br><br>
+            {% endfor %}
+        {% endif %}
+        
+        {% block content %}{% endblock content %}
+   </main>
+    
+</body>
+</html>
