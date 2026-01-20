@@ -25,6 +25,14 @@ def register_view(request):
             user = form.save(commit=False)
             user.set_password(form.cleaned_data["password"])
             user.is_active = False
+
+            role = request.POST.get("role")
+            if role == "seller":
+                user.is_seller = True
+                user.is_customer = False
+            else:
+                user.is_seller = False
+                user.is_customer = True
             user.save()
 
             uidb64 = urlsafe_base64_encode(force_bytes(user.pk))
@@ -78,14 +86,7 @@ def activate_account(request, uidb64, token):
 
 
 def login_view(request):
-
     if request.user.is_authenticated:
-
-        print('is_auth : ', request.user.is_authenticated)
-        print('is_seller : ', request.user.is_seller)
-        print('is_customer : ', request.user.is_customer)
-        print('email : ', request.POST.get("email"))
-
         if request.user.is_seller:
             return redirect('seller_dashboard')
         elif request.user.is_customer:
@@ -101,11 +102,6 @@ def login_view(request):
             return redirect('login')
         try:
             user = User.objects.get(email=email)
-
-            print('is_auth : ', user.is_authenticated)
-            print('is_seller : ', user.is_seller)
-            print('is_customer : ', user.is_customer)
-            print('email : ', user.email)
 
         except User.DoesNotExist:
             messages.error(request, "Invalid email or password.")
@@ -201,7 +197,8 @@ def password_reset_confirm_view(request, uidb64, token):
             form = SetPasswordForm(user, request.POST)
             if form.is_valid():
                 form.save()
-                messages.success(request, "Your password has been successfully reset.")
+                messages.success(
+                    request, "Your password has been successfully reset.")
                 return redirect('login')
         else:
             form = SetPasswordForm(user)
@@ -213,4 +210,3 @@ def password_reset_confirm_view(request, uidb64, token):
     except (TypeError, ValueError, OverflowError, User.DoesNotExist):
         messages.error(request, "An error occurred. Please try again later.")
         return redirect('password_reset')
-

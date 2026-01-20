@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'account',
     'customer',
     'seller',
+    'core',
 ]
 
 MIDDLEWARE = [
@@ -153,4 +154,4 @@ LOGIN_URL = 'login'
 
 
 # Set time to expire or invalid Password reset link
-PASSWORD_RESET_TIMEOUT = 20*60  #20 min
+PASSWORD_RESET_TIMEOUT = 20*60  # 20 min
