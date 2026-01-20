@@ -1,0 +1,60 @@
+{% extends 'account/base.html' %}
+{% block title %}{{ product.name }}{% endblock title %}
+
+{% block content %}
+<div class="min-h-screen px-6 py-10
+            bg-gradient-to-br from-slate-900 via-gray-900 to-black">
+
+  <div class="max-w-3xl mx-auto
+              bg-gray-900/70 border border-gray-800
+              rounded-xl shadow-xl p-8">
+
+    <!-- Product Name -->
+    <h1 class="text-3xl font-bold text-cyan-400 mb-4">
+      {{ product.name }}
+    </h1>
+
+    <!-- Price -->
+    <p class="text-xl font-semibold text-green-400 mb-4">
+      $ {{ product.price }}
+    </p>
+
+    <!-- Description -->
+    <p class="text-gray-300 leading-relaxed mb-8">
+      {{ product.description }}
+    </p>
+
+    <!-- Action Buttons -->
+    <div class="flex gap-4">
+        <!-- Edit -->
+        {% if perms.product.change_product %}
+            <a href="{% url 'product_edit' product.pk %}"
+            class="px-6 py-2 rounded-lg
+                    bg-blue-600 hover:bg-blue-700
+                    text-white font-medium transition">
+            Edit
+            </a>
+        {% endif %}
+
+        <!-- Delete -->
+        {% if perms.product.delete_product %}
+            <a href="{% url 'product_delete' product.pk %}"
+                class="px-6 py-2 rounded-lg
+                        bg-red-600 hover:bg-red-700
+                        text-white font-medium transition">
+                Delete
+            </a>
+        {% endif %}
+
+        <!-- Back -->
+        <a href="{% url 'product_list' %}"
+            class="px-6 py-2 rounded-lg
+                    bg-gray-700 hover:bg-gray-600
+                    text-white font-medium transition">
+            Back
+        </a>
+    </div>
+
+  </div>
+</div>
+{% endblock content %}

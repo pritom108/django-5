@@ -1,0 +1,41 @@
+{% extends 'account/base.html' %}
+{% block title %}Seller Dashboard{% endblock title %}
+
+{% block content %}
+<div class="min-h-screen px-4 bg-gradient-to-br from-slate-900 via-gray-900 to-black dark:from-slate-900 dark:via-gray-900 dark:to-black">
+    <h1 class="text-center p-8 font-bold text-white text-3xl">Seller Dashboard</h1>
+
+    <hr>
+
+    <!-- Navigation Menu -->
+    <ul class="flex space-x-4 bg-gray-900/80 p-4 rounded-lg shadow-md">
+    
+        <!-- Product List -->
+        {% if perms.product.view_product %}
+            <li>
+                <a href="{% url 'product_list' %}"
+                class="px-4 py-2 rounded-lg
+                        text-gray-100 hover:text-white
+                        hover:bg-cyan-600 transition font-medium">
+                Product List
+                </a>
+            </li>
+        {% endif %}
+
+        <!-- Product Add (permission required) -->
+        {% if perms.product.add_product %}
+        <li>
+            <a href="{% url 'product_add' %}"
+            class="px-4 py-2 rounded-lg
+                    text-gray-100 hover:text-white
+                    hover:bg-green-600 transition font-medium">
+            Add Product
+            </a>
+        </li>
+        {% endif %}
+
+
+    </ul>
+</div>
+
+{% endblock content %}
