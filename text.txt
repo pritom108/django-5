@@ -1,0 +1,30 @@
+VS code Shortcut:::::
+======================
+Ctrl + 1 =====>  Workspace 
+Ctrl + ` =====> Terminal
+Ctrl + Shift + E =====> Explorer or Left side file and folder
+Ctrl + F4 =====> Close working tab
+
+
+VS Code Keyboard Navigation – Windows
+======================================
+
+1. Move by Word
+   - Move left by word =====> Ctrl + ←
+   - Move right by word =====> Ctrl + →
+   - Select word left =====> Ctrl + Shift + ←
+   - Select word right =====> Ctrl + Shift + →
+
+2. Move by Line
+   - Move to start of line =====> Home
+   - Move to end of line =====> End
+   - Select to start of line =====> Shift + Home
+   - Select to end of line =====> Shift + End
+
+3. Move by Paragraph
+   - Move up one paragraph =====> Ctrl + ↑
+   - Move down one paragraph =====> Ctrl + ↓
+   - Select paragraph up =====> Ctrl + Shift + ↑
+   - Select paragraph down =====> Ctrl + Shift + ↓
+
+
