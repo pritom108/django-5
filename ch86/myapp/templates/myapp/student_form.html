@@ -1,0 +1,132 @@
+{% extends 'myapp/base.html' %}
+
+{% block title %}Add Student{% endblock %}
+
+{% block content %}
+<div class="min-h-screen flex items-center justify-center bg-gray-50 py-10 px-4">
+
+    <div class="bg-white w-full max-w-lg shadow-lg rounded-xl p-8">
+        <h2 class="text-2xl font-bold text-center text-blue-600 mb-6">
+            {% if form.instance.pk %}
+                Edit
+            {% else %}
+                Add
+            {% endif %}
+            Student
+        </h2>
+
+        <form method="POST" class="space-y-5">
+            {% csrf_token %}
+
+            <!-- Name Field -->
+            <div class="mb-4">
+                <label for="{{ form.name.id_for_label }}" 
+                    class="block mb-1 text-gray-700 font-medium">
+                    {{ form.name.label }}
+                </label>
+
+                <input 
+                    type="text"
+                    name="{{ form.name.name }}"
+                    id="{{ form.name.id_for_label }}"
+                    value="{{ form.name.value|default_if_none:'' }}"
+                    placeholder="Enter your name"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-lg 
+                        text-gray-700 bg-white 
+                        focus:outline-none focus:ring-2 focus:ring-blue-500 
+                        focus:border-blue-500 transition duration-200"
+                >
+
+                {% if form.name.errors %}
+                <div class="mt-1">
+                    {% for error in form.name.errors %}
+                        <p class="text-red-600 text-sm font-medium">
+                            {{ error }}
+                        </p>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+
+
+
+            <!-- Email Field -->
+            <div class="mb-4">
+                <label for="{{ form.email.id_for_label }}" 
+                    class="block mb-1 text-gray-700 font-medium">
+                    {{ form.email.label }}
+                </label>
+
+                <input 
+                    type="email"
+                    name="{{ form.email.name }}"
+                    id="{{ form.email.id_for_label }}"
+                    value="{{ form.email.value|default_if_none:'' }}"
+                    placeholder="Enter your email"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-lg 
+                        text-gray-700 bg-white 
+                        focus:outline-none focus:ring-2 focus:ring-blue-500 
+                        focus:border-blue-500 transition duration-200"
+                >
+
+                {% if form.email.errors %}
+                <div class="mt-1">
+                    {% for error in form.email.errors %}
+                        <p class="text-red-600 text-sm font-medium">
+                            {{ error }}
+                        </p>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+
+
+
+            <!-- Roll Field -->
+            <div class="mb-6">
+                <label for="{{ form.roll.id_for_label }}" 
+                    class="block mb-1 text-gray-700 font-medium">
+                    {{ form.roll.label }}
+                </label>
+
+                <input 
+                    type="number"
+                    name="{{ form.roll.name }}"
+                    id="{{ form.roll.id_for_label }}"
+                    value="{{ form.roll.value|default_if_none:'' }}"
+                    placeholder="Enter roll number"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-lg 
+                        text-gray-700 bg-white 
+                        focus:outline-none focus:ring-2 focus:ring-blue-500 
+                        focus:border-blue-500 transition duration-200"
+                >
+
+                {% if form.roll.errors %}
+                <div class="mt-1">
+                    {% for error in form.roll.errors %}
+                        <p class="text-red-600 text-sm font-medium">
+                            {{ error }}
+                        </p>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+
+
+            <!-- Submit Button -->
+            <button 
+                type="submit" 
+                class="w-full bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition">
+                Submit
+            </button>
+        </form>
+        <a href="/student/" 
+        class="inline-block mt-4 text-blue-600 font-medium hover:underline">
+            ← Back to List
+        </a>
+    </div>
+
+</div>
+
+
+{% endblock %}

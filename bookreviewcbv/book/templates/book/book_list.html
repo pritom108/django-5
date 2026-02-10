@@ -1,0 +1,47 @@
+{% extends 'book/base.html' %}
+
+{% block title %}Book List{% endblock %}
+
+{% block content %}
+<div class="p-6">
+
+    <!-- Genre Filter Buttons -->
+    <div class="flex flex-wrap gap-3 mb-6">
+        <!-- All Button -->
+        <a href="{% url 'book-list' %}" class="px-4 py-2 rounded-lg border font-medium {% if not request.GET.genre %}bg-purple-600 text-white{% else %}bg-gray-200 text-gray-800{% endif %}">All</a>
+        <a href="?genre=fiction" class="px-4 py-2 rounded-lg border font-medium bg-gray-200 text-gray-800 {% if request.GET.genre == 'fiction' %}bg-purple-600 text-white{% endif %}">Fiction</a>
+        <a href="?genre=non_fiction" class="px-4 py-2 rounded-lg border font-medium bg-gray-200 text-gray-800 {% if request.GET.genre == 'non_fiction' %}bg-purple-600 text-white{% endif %}">Non-Fiction</a>
+        <a href="?genre=science" class="px-4 py-2 rounded-lg border font-medium bg-gray-200 text-gray-800 {% if request.GET.genre == 'science' %}bg-purple-600 text-white{% endif %}">Science</a>
+        <a href="?genre=technology" class="px-4 py-2 rounded-lg border font-medium bg-gray-200 text-gray-800 {% if request.GET.genre == 'technology' %}bg-purple-600 text-white{% endif %}">Technology</a>
+        <a href="?genre=history" class="px-4 py-2 rounded-lg border font-medium bg-gray-200 text-gray-800 {% if request.GET.genre == 'history' %}bg-purple-600 text-white{% endif %}">History</a>
+        <a href="?genre=other" class="px-4 py-2 rounded-lg border font-medium bg-gray-200 text-gray-800 {% if request.GET.genre == 'other' %}bg-purple-600 text-white{% endif %}">Other</a>
+    </div>
+
+    <!-- Book Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        {% if books %}
+            {% for book in books %}
+                <div class="bg-white shadow-lg rounded-lg p-5 border">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-2">{{ book.title }}</h2>
+                    <p class="text-gray-600 font-medium mb-3">By {{ book.author }}</p>
+                    <p class="text-gray-700 text-sm mb-4">
+                        {{ book.description|truncatechars:120 }}
+                    </p>
+                    <a href="{% url 'book-detail' book.pk %}" 
+                       class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                        View Details
+                    </a>
+                </div>
+            {% endfor %}
+        {% else %}
+            <!-- Empty State Card -->
+            <div class="col-span-full bg-white shadow-lg rounded-lg p-5 border text-center">
+                <h2 class="text-xl font-bold text-gray-800 mb-2">No books available</h2>
+                <p class="text-gray-600">Add some books to see them listed here.</p>
+            </div>
+        {% endif %}
+
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends "myapp/base.html" %}
+
+{% block title %}Delete {{ object.name }}{% endblock %}
+
+{% block content %}
+<div class="min-h-screen flex items-center justify-center bg-gray-50 px-4 py-10">
+
+    <div class="bg-white rounded-xl shadow-lg p-8 w-full max-w-md border border-gray-100">
+        
+        <!-- Warning Icon -->
+        <div class="flex justify-center mb-6">
+            <svg class="w-12 h-12 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 9v2m0 4h.01M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/>
+            </svg>
+        </div>
+
+        <!-- Heading -->
+        <h2 class="text-2xl font-bold text-gray-800 text-center mb-4">
+            Are you sure?
+        </h2>
+
+        <!-- Message -->
+        <p class="text-center text-gray-600 mb-6">
+            Do you really want to delete <span class="font-semibold">{{ object.name }}</span>? This action cannot be undone.
+        </p>
+
+        <!-- Action Buttons -->
+        <form method="POST" class="flex justify-center gap-4">
+            {% csrf_token %}
+            
+            <!-- Cancel -->
+            <a href="{% url 'list' %}" 
+               class="px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition">
+                Cancel
+            </a>
+
+            <!-- Delete -->
+            <button type="submit" 
+                    class="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition">
+                Delete
+            </button>
+        </form>
+
+    </div>
+
+</div>
+{% endblock %}
