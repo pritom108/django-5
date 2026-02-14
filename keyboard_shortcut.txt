@@ -1,0 +1,55 @@
+VS code Shortcut:::::
+======================
+Ctrl + 1 =====>  Workspace (Ctrl + 2/3/..)
+Ctrl + Tab ====> Hovering through tab => move forward
+Ctrl + Shift + Tab ====> Hovering through tab => move backward
+Ctrl + ` =====> Terminal
+Ctrl + Shift + E =====> Explorer or Left side file and folder
+Ctrl + F4 =====> Close working tab (Ctrl + W)
+
+
+VS Code Keyboard Navigation – Windows
+======================================
+
+1. Move and select by Word
+   - Move left by word =====> Ctrl + ←
+   - Move right by word =====> Ctrl + →
+   - Select word left =====> Ctrl + Shift + ←
+   - Select word right =====> Ctrl + Shift + →                       
+
+2. Move and select by Line
+   - Move to start of line =====> Home
+   - Move to end of line =====> End
+   - Select to start of line =====> Shift + Home
+   - Select to end of line =====> Shift + End
+   - Select full line ====> Ctrl + L 
+   - Select full word ====> Ctrl + D 
+
+3. Move by Paragraph
+   - Move up one paragraph =====> Ctrl + ↑
+   - Move down one paragraph =====> Ctrl + ↓
+   - Select paragraph up =====> Ctrl + Shift + ↑
+   - Select paragraph down =====> Ctrl + Shift + ↓
+
+4. Create New keyboard shortcut:
+   - Ctrl + Shift + E 
+   - Ctrl + K  and Ctrl + S
+   - type Explorer.newFile
+   - Click + icon 
+   - Type shortcut => Alt + N
+
+5. Create New file and folder Shortcut
+   - Create new folder: Alt + F
+   - Create new file: Alt + N
+
+6. Chrome shortcut:
+   - Alt + Tab ====> to hover between different window Tab
+   - (Ctrl + Tab) and (Ctrl + Shift + Tab) ====> to hover between differnt chrome tab
+   - Ctrl + T ====> to create new chrome tab
+   - Ctrl + R =====> to Reload chrome tab 
+   - Ctrl + Shift + I ====> To inspect chrome browser
+   - Ctrl + L ====> to focus view site information of the chrome browser 
+
+
+
+
