@@ -50,6 +50,11 @@ VS Code Keyboard Navigation – Windows
    - Ctrl + Shift + I ====> To inspect chrome browser
    - Ctrl + L ====> to focus view site information of the chrome browser 
 
+7. Emojis Shortcut
+   - (Windows + .) or (Windows + ;)
+   - Shift + ;
+
+
 
 
 
