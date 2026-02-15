@@ -2,8 +2,20 @@
 
 {% block title %}About{% endblock title %}
 
+{% block hero %}
+{% include 'core/components/hero.html' %}
+{% endblock hero %}
+
 {% block content %}
 <h1>About Page</h1>
+
+{% include "core/components/list.html" %}
+<hr>
+{% include "core/components/list.html" with list_element='JavaScript' %}
+<hr>
+{% include "core/components/list.html" with lang='JavaScript' %}
+<hr>
+{% include "core/components/list.html" with lang='JavaScript' only %}
 
 {% endblock content %}
 

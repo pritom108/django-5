@@ -3,11 +3,20 @@
 {% block title %}Home{% endblock title %}
 
 {% block hero %}
-<h2>Hero Section</h2>
+{% include 'core/components/hero.html' %}
 {% endblock hero %}
 
 {% block content %}
-<h1 class="bg-orange-400">Home Page</h1>
+<h1>Home Page</h1>
+
+{% include "core/components/list.html" %}
+<hr>
+{% include "core/components/list.html" with list_element='JavaScript' %}
+<hr>
+{% include "core/components/list.html" with lang='JavaScript' %}
+<hr>
+{% include "core/components/list.html" with lang='JavaScript' only %}
+
 {% endblock content %}
 
 {% block footer %}This is Home Footer{% endblock footer %}

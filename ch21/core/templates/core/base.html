@@ -8,24 +8,8 @@
     <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="{}">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/course/dj">Django</a></li>
-            <li><a href="/course/py">Python</a></li>
-        </ul>
-        <hr>
-        <ul>
-            <li><a href="{% url 'home' %}">Home</a></li>
-            <li><a href="{% url 'about' %}">About</a></li>
-            <li><a href="{% url 'django' %}">Django</a></li>
-            <li><a href="{% url 'python' %}">Python</a></li>
+    {% include 'core/components/navbar.html' %}
 
-            {% url 'python' as py %}
-            <li><a href="{{py}}">Python as py</a></li>
-        </ul>
-    </nav>
     {% block hero %}{% endblock hero %}
     
     {% block content %}{% endblock content %}
