@@ -7,18 +7,18 @@
 </head>
 <body>
     <h1>Hello Django Template Language (DTL)</h1>
-    <h2>Example 1.1: Variable</h2>
-    <h3>Name: {{name}}</h3>
+    <!-- <h2>Example 1.1: Variable</h2>
+    <h3>Name: {{name}}</h3> -->
 
 
     <h2>Example 1.2: Variable</h2>
-    <h3>Name: {{nm}}</h3>
+    <!-- <h3>Name: {{nm}}</h3>
     <h3>Duration: {{du}}</h3>
-    <h3>Seats: {{st}}</h3>
+    <h3>Seats: {{st}}</h3> -->
 
 
     <h2>Example 2: Filters</h2>
-    <h3>Name: {{name}}</h3>
+    <!-- <h3>Name: {{name}}</h3>
     <h3>Upper: {{name|upper}}</h3>
     <h3>Lower: {{name|lower}}</h3>
     <h3>Default: {{name|default:'nothing'}}</h3>
@@ -28,21 +28,21 @@
 
     <h3>Desc: {{desc}}</h3>
     <h3>Truncate word: {{desc|truncatewords:3}}</h3>
-    <h3>Upper & Truncate word: {{desc|upper|truncatewords:3}}</h3>
+    <h3>Upper & Truncate word: {{desc|upper|truncatewords:3}}</h3> -->
 
 
     <h2>Example 3: Date And Time</h2>
-    <h3>{{dt}}</h3>     
+    <!-- <h3>{{dt}}</h3>     
     <h3>{{dt|date}}</h3>    
     <h3>{{dt|date:'D d M Y'}}</h3>     
     <h3>{{dt|time}}</h3>     
     <h3>{{dt|time:'H:i'}}</h3>   
     <h3>{{dt|date:'SHORT_DATE_FORMAT'}}</h3>    
-    <h3>{{dt|time:'TIME_FORMAT'}}</h3>    
+    <h3>{{dt|time:'TIME_FORMAT'}}</h3>     -->
 
 
     <h2>Example 4: Float Format</h2>
-    <h3>{{p1}}</h3>
+    <!-- <h3>{{p1}}</h3>
     <h3>{{p2}}</h3>
     <h3>{{p3}}</h3>
 
@@ -55,11 +55,11 @@
 
     <h3>{{p1|floatformat:-3}}</h3>
     <h3>{{p2|floatformat:-3}}</h3>
-    <h3>{{p3|floatformat:-3}}</h3>
+    <h3>{{p3|floatformat:-3}}</h3> -->
 
 
     <h2>Example 5.1: If tag</h2>
-    {% if nm %}
+    <!-- {% if nm %}
         <h3>Hello If Tag</h3>
     {% endif %}
 
@@ -101,11 +101,11 @@
         <h3>Name: {{nm}} Seats: {{st}}</h3>
     {% else %}
         <h3>Name: Guest</h3>
-    {% endif %}
+    {% endif %} -->
 
 
     <h2>Example 6: For Loop</h2>
-    <ul>
+    <!-- <ul>
         {% for name in names %}
             <li>{{name}}</li>
         {% endfor %}
@@ -132,21 +132,21 @@
         {% for name in names reversed %}
             <li>{{forloop.counter}} {{name}}</li>
         {% endfor %}
-    </ul>
+    </ul> -->
 
 
     <h2>Example 7: Complex Data</h2>
-    <h3>{{students}}</h3>
+    <!-- <h3>{{students}}</h3>
     <h3>{{students.stu1}}</h3>
     <h3>{{students.stu1.name}}</h3>
-    <h3>{{students.stu1.roll}}</h3>
+    <h3>{{students.stu1.roll}}</h3> -->
 
 
     <h2>Example 8</h2>
-    <h3>{{student}}</h3>
+    <!-- <h3>{{student}}</h3>
     {% for key, value in student.items %}
         {{key}} - {{value}} <br>
-    {% endfor %}
+    {% endfor %} -->
 
     
     <h2>Example 9</h2>
