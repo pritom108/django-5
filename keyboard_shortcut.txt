@@ -43,16 +43,22 @@ VS Code Keyboard Navigation – Windows
    - Create new file: Alt + N
 
 6. Chrome shortcut:
-   - Alt + Tab ====> to hover between different window Tab
+   - Alt + Tab ====> to hover between different window App
    - (Ctrl + Tab) and (Ctrl + Shift + Tab) ====> to hover between differnt chrome tab
    - Ctrl + T ====> to create new chrome tab
    - Ctrl + R =====> to Reload chrome tab 
    - Ctrl + Shift + I ====> To inspect chrome browser
    - Ctrl + L ====> to focus view site information of the chrome browser 
 
-7. Emojis Shortcut
+7. Close, minimize and maximize Window
+   - Close ====> Alt + F4
+   - Minimize ====> Windows + ↓
+   - Maximize ====> windows + ↑
+
+8. Emojis Shortcut
    - (Windows + .) or (Windows + ;)
    - Shift + ;
+
 
 
 

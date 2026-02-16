@@ -1,0 +1,20 @@
+{% load static %}
+<!-- Hero Section -->
+<section class="relative bg-gray-50">
+  <!-- Background Image -->
+  <div class="absolute inset-0">
+    <!-- <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1950&q=80" 
+         alt="Delicious Food" 
+         class="w-full h-full object-cover brightness-75"> -->
+    <img src="{% static 'core/images/image1.avif' %}" 
+         alt="Delicious Food" 
+         class="w-full h-full object-cover brightness-75">
+  </div>
+
+  <!-- Content -->
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center text-white">
+    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold drop-shadow-lg">Welcome to Restaurant</h1>
+    <p class="mt-6 text-lg sm:text-xl lg:text-2xl drop-shadow-md">Delicious meals, fresh ingredients, and a cozy ambiance.</p>
+    <a href="#menu" class="mt-8 inline-block bg-red-600 hover:bg-red-700 text-white font-semibold px-8 py-3 rounded-lg shadow-lg transition duration-300">View Menu</a>
+  </div>
+</section>

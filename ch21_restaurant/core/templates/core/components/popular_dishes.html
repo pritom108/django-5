@@ -1,0 +1,44 @@
+{% load static %}
+
+<!-- Popular Dishes Section -->
+<section class="bg-gray-50 py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-800">Popular Dishes</h2>
+      <p class="mt-4 text-gray-600">Our customers’ favorite meals, made fresh every day!</p>
+    </div>
+
+    <!-- Dish Cards Grid -->
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      
+      <!-- Dish 1 -->
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transform transition duration-300">
+        <img class="w-full h-56 object-cover" src="{% static 'core/images/dish1.avif' %}" alt="Grilled Steak">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-800">Grilled Steak</h3>
+          <p class="mt-2 text-gray-600 text-sm">Juicy, perfectly seared steak served with fresh herbs and vegetables.</p>
+        </div>
+      </div>
+
+      <!-- Dish 2 -->
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transform transition duration-300">
+        <img class="w-full h-56 object-cover" src="{% static 'core/images/dish2.avif' %}" alt="Pasta Delight">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-800">Pasta Delight</h3>
+          <p class="mt-2 text-gray-600 text-sm">Creamy pasta tossed with fresh vegetables and parmesan cheese.</p>
+        </div>
+      </div>
+
+      <!-- Dish 3 -->
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transform transition duration-300">
+        <img class="w-full h-56 object-cover" src="{% static 'core/images/dish3.avif' %}" alt="Sushi Platter">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-800">Sushi Platter</h3>
+          <p class="mt-2 text-gray-600 text-sm">Fresh sushi rolls made with premium ingredients and authentic flavors.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

@@ -1,0 +1,45 @@
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        
+        <!-- Brand -->
+        <div class="flex items-center">
+          <a href="{% url 'home' %}" class="text-2xl font-bold text-red-600">Restaurant</a>
+        </div>
+        
+        <!-- Links + Search + Cart -->
+        <div class="flex items-center space-x-4">
+          
+          <!-- Navigation Links -->
+          <div class="hidden md:flex space-x-4">
+            <a href="{% url 'home' %}" class="text-gray-700 hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+            <a href="{% url 'about' %}" class="text-gray-700 hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium">About</a>
+            <a href="{% url 'menu' %}" class="text-gray-700 hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium">Menu</a>
+            <a href="{% url 'contact' %}" class="text-gray-700 hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+          </div>
+
+          <!-- Search Bar -->
+          <div class="relative">
+            <input type="text" placeholder="Search..." class="pl-3 pr-10 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-red-600 text-sm">
+            <button class="absolute right-0 top-0 mt-2 mr-2 text-gray-400 hover:text-red-600">
+              🔍
+            </button>
+          </div>
+
+          
+        <!-- Takeaway Basket Icon with item count -->
+        <div class="relative">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700 hover:text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <!-- Takeaway Basket / Shopping Bag Icon -->
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11h14l1 10H4L5 11zM16 11V5a4 4 0 00-8 0v6" />
+            </svg>
+            <span class="absolute -top-2 -right-2 bg-red-600 text-white rounded-full text-xs w-5 h-5 flex items-center justify-center">3</span>
+        </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </nav>

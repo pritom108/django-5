@@ -1,0 +1,82 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% block title %}Menu{% endblock title %}
+
+{% block maincontent %}
+<!-- Menu Section -->
+<section class="bg-gray-50 py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-800">Our Menu</h2>
+      <p class="mt-4 text-gray-600">Explore our delicious offerings — freshly made for every taste!</p>
+    </div>
+
+    <!-- Menu Grid -->
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      
+      <!-- Menu Item 1 -->
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transform transition duration-300">
+        <img class="w-full h-56 object-cover" src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=800&q=80" alt="Grilled Steak">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-800">Grilled Steak</h3>
+          <p class="mt-2 text-gray-600 text-sm">Juicy grilled steak served with fresh vegetables and herbs.</p>
+          <p class="mt-2 font-bold text-gray-900">$24.99</p>
+        </div>
+      </div>
+
+      <!-- Menu Item 2 -->
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transform transition duration-300">
+        <img class="w-full h-56 object-cover" src="https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&w=800&q=80" alt="Pasta Delight">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-800">Pasta Delight</h3>
+          <p class="mt-2 text-gray-600 text-sm">Creamy pasta with fresh vegetables and parmesan cheese.</p>
+          <p class="mt-2 font-bold text-gray-900">$15.99</p>
+        </div>
+      </div>
+
+      <!-- Menu Item 3 -->
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transform transition duration-300">
+        <img class="w-full h-56 object-cover" src="https://images.unsplash.com/photo-1617196033906-8b4d8c92f6b4?auto=format&fit=crop&w=800&q=80" alt="Veggie Pizza">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-800">Veggie Pizza</h3>
+          <p class="mt-2 text-gray-600 text-sm">Loaded with fresh vegetables, mozzarella, and tangy tomato sauce.</p>
+          <p class="mt-2 font-bold text-gray-900">$12.99</p>
+        </div>
+      </div>
+
+      <!-- Menu Item 4 -->
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transform transition duration-300">
+        <img class="w-full h-56 object-cover" src="https://images.unsplash.com/photo-1612874748553-1e9d8a5216c4?auto=format&fit=crop&w=800&q=80" alt="Classic Burger">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-800">Classic Burger</h3>
+          <p class="mt-2 text-gray-600 text-sm">Juicy beef patty with fresh lettuce, tomato, and special sauce.</p>
+          <p class="mt-2 font-bold text-gray-900">$10.99</p>
+        </div>
+      </div>
+
+      <!-- Menu Item 5 -->
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transform transition duration-300">
+        <img class="w-full h-56 object-cover" src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=800&q=80" alt="Sushi Platter">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-800">Sushi Platter</h3>
+          <p class="mt-2 text-gray-600 text-sm">Fresh sushi rolls made with premium ingredients and authentic flavors.</p>
+          <p class="mt-2 font-bold text-gray-900">$19.99</p>
+        </div>
+      </div>
+
+      <!-- Menu Item 6 -->
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transform transition duration-300">
+        <img class="w-full h-56 object-cover" src="https://images.unsplash.com/photo-1600891964915-872e1a87d7d4?auto=format&fit=crop&w=800&q=80" alt="Salad Bowl">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-800">Fresh Salad Bowl</h3>
+          <p class="mt-2 text-gray-600 text-sm">A healthy mix of greens, cherry tomatoes, cucumbers, and light dressing.</p>
+          <p class="mt-2 font-bold text-gray-900">$9.99</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+{% endblock maincontent %}
